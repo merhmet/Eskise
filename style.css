@@ -120,8 +120,8 @@ body{
 
  button {
         background-color: #000;
-        border: .5px solid crimson;
+        border: .10px solid crimson;
         border-radius: 10px;
         color: #fff;
-        padding: 8px;
+        padding: 12px;
       }
