@@ -1,71 +1,127 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-html,body{
-  display: grid;
-  height: 100%;
-  place-items: center;
-  text-align: center;
-  background: #f2f2f2;
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    background: #010615;
 }
-.slider{
-  max-width: 1100px;
-  display: flex;
+.box{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    transition: 0.5s;
 }
-.slider .card{
-  flex: 1;
-  margin: 0 10px;
-  background: #fff;
+.box:hover{
+    height: 345px;
 }
-.slider .card .img{
-  height: 400px;
-  width: 100%;
+.img .imgbox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.box .imgbox img{
+    width: 100%;
+    opacity: 0.1;
+    transition: 0.5s;
+    padding: 8px;
+}
+.box:nth-child(3) .imgbox img{
+    height: 300px;
+    width: 298px;
+}
+.box:hover .imgbox img{
+    opacity: 1;
+    margin: 0px 0 40px 0px;
+}
+.box::before{
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+}
+.box::after{
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(40px);
+}
+.box::before,
+.box::after{
+    background: linear-gradient(235deg, #6f00ff, #5fd400);
+}
+.box:nth-child(2)::before,
+.box:nth-child(2)::after{
+    background: linear-gradient(235deg, #00eeff, #d41900);
+}
+.box:nth-child(2)::before,
+.box:nth-child(2)::after{
+    background: linear-gradient(235deg, #ff00c8, #f9fd08);
+}
+.box .content{
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+    width: 283px;
+}
+.box:hover .content{
+    opacity: 1;
+}
+.box .content h2{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+.box .content h2 span{
+    font-size: 14px;
+    color: #5fd400;
+    font-weight: 200;
+    letter-spacing: 2px;
 }
 
 
 
-.slider .card .img img{
-  height: 180%;
-  width: 120%;
-  object-fit: cover;
-}
-.slider .card .content{
-  padding: 10px 20px;
-}
-.card .content .title{
-  font-size: 25px;
-  font-weight: 600;
-}
-.card .content .sub-title{
-  font-size: 20px;
-  font-weight: 600;
-  color: #e74c3c;
-  line-height: 20px;
-}
-.card .content p{
-  text-align: justify;
-  margin: 10px 0;
-}
-.card .content .btn{
-  display: block;
-  text-align: left;
-  margin: 10px 0;
-}
-.card .content .btn button{
-  background: #e74c3c;
-  color: #fff;
-  border: none;
-  outline: none;
-  font-size: 17px;
-  padding: 5px 8px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-.card .content .btn button:hover{
-  transform: scale(0.9);
-}
+
+
+
+
+
+
+ button {
+        background-color: #000;
+        border: .15px solid crimson;
+        border-radius: 13px;
+        color: #fff;
+        padding: 12px;
+      }
