@@ -91,18 +91,18 @@ const ScrollableComponent = (props) => {
     return (React.createElement("div", { ref: ref, className: classNames("scrollable-component", props.className), id: props.id, onMouseDown: handleOnMouseDown, onMouseMove: handleOnMouseMove, onMouseUp: handleOnMouseUp, onMouseLeave: handleOnMouseUp }, props.children));
 };
 const WeatherSnap = () => {
-    const [temperature] = React.useState(N.rand(65, 85));
+    const [temperature] = React.useState(N.rand(0, 35));
     return (React.createElement("span", { className: "weather" },
         React.createElement("i", { className: "weather-type", className: "fa-duotone fa-sun" }),
         React.createElement("span", { className: "weather-temperature-value" }, temperature),
-        React.createElement("span", { className: "weather-temperature-unit" }, "\u00B0F")));
+        React.createElement("span", { className: "weather-temperature-unit" }, "\u00B0C")));
 };
 const Reminder = () => {
     return (React.createElement("div", { className: "reminder" },
         React.createElement("div", { className: "reminder-icon" },
             React.createElement("i", { className: "fa-regular fa-bell" })),
         React.createElement("span", { className: "reminder-text" },
-            "Extra cool people meeting ",
+          
             React.createElement("span", { className: "reminder-time" }, "10AM"))));
 };
 const Time = () => {
@@ -189,7 +189,7 @@ const Pin = () => {
             React.createElement(PinDigit, { focused: pin.length === 2, value: pin[2] }),
             React.createElement(PinDigit, { focused: pin.length === 3, value: pin[3] })),
         React.createElement("h3", { id: "app-pin-label" },
-            "Enter PIN (1234) ",
+            "PIN Giriş Yaz  (1234) ",
             getErrorText(),
             " ",
             getCancelText())));
@@ -211,16 +211,16 @@ const QuickNav = () => {
     const getItems = () => {
         return [{
                 id: 1,
-                label: "Weather"
+                label: "Hava Durumu"
             }, {
                 id: 2,
-                label: "Food"
+                label: "Yemek"
             }, {
                 id: 3,
                 label: "Apps"
             }, {
                 id: 4,
-                label: "Movies"
+                label: "Filmler"
             }].map((item) => {
             return (React.createElement("div", { key: item.id, className: "quick-nav-item clear-button" },
                 React.createElement("span", { className: "quick-nav-item-label" }, item.label)));
@@ -232,37 +232,37 @@ const Weather = () => {
     const getDays = () => {
         return [{
                 id: 1,
-                name: "Mon",
+                name: "Pzt",
                 temperature: N.rand(60, 80),
                 weather: WeatherType.Sunny
             }, {
                 id: 2,
-                name: "Tues",
+                name: "Sal",
                 temperature: N.rand(60, 80),
                 weather: WeatherType.Sunny
             }, {
                 id: 3,
-                name: "Wed",
+                name: " Çar",
                 temperature: N.rand(60, 80),
                 weather: WeatherType.Cloudy
             }, {
                 id: 4,
-                name: "Thurs",
+                name: "Per",
                 temperature: N.rand(60, 80),
                 weather: WeatherType.Rainy
             }, {
                 id: 5,
-                name: "Fri",
+                name: "Cum",
                 temperature: N.rand(60, 80),
                 weather: WeatherType.Stormy
             }, {
                 id: 6,
-                name: "Sat",
+                name: "Cmt",
                 temperature: N.rand(60, 80),
                 weather: WeatherType.Sunny
             }, {
                 id: 7,
-                name: "Sun",
+                name: "Paz",
                 temperature: N.rand(60, 80),
                 weather: WeatherType.Cloudy
             }].map((day) => {
@@ -282,7 +282,7 @@ const Weather = () => {
                 React.createElement("div", { className: "day-card-content" },
                     React.createElement("span", { className: "day-weather-temperature" },
                         day.temperature,
-                        React.createElement("span", { className: "day-weather-temperature-unit" }, "\u00B0F")),
+                        React.createElement("span", { className: "day-weather-temperature-unit" }, "\u00B0C")),
                     React.createElement("i", { className: classNames("day-weather-icon", getIcon(), day.weather.toLowerCase()) }),
                     React.createElement("span", { className: "day-name" }, day.name))));
         });
@@ -375,7 +375,7 @@ const Restaurants = () => {
                         React.createElement("span", { className: "restaurant-card-desc" }, restaurant.desc)))));
         });
     };
-    return (React.createElement(MenuSection, { icon: "fa-regular fa-pot-food", id: "restaurants-section", title: "Get it delivered!" }, getRestaurants()));
+    return (React.createElement(MenuSection, { icon: "fa-regular fa-pot-food", id: "restaurants-section", title: "Yemek" }, getRestaurants()));
 };
 const Movies = () => {
     const getMovies = () => {
@@ -417,7 +417,7 @@ const Movies = () => {
                     React.createElement("i", { className: movie.icon }))));
         });
     };
-    return (React.createElement(MenuSection, { icon: "fa-solid fa-camera-movie", id: "movies-section", scrollable: true, title: "Popcorn time!" }, getMovies()));
+    return (React.createElement(MenuSection, { icon: "fa-solid fa-camera-movie", id: "movies-section", scrollable: true, title: "Film Zamani!" }, getMovies()));
 };
 const UserStatusButton = (props) => {
     const { userStatus, setUserStatusTo } = React.useContext(AppContext);
@@ -438,9 +438,9 @@ const Menu = () => {
                     React.createElement("div", { className: "app-menu-content-header-section" },
                         React.createElement(UserStatusButton, { icon: "fa-solid fa-arrow-right-from-arc", id: "sign-out-button", userStatus: UserStatus.LoggedOut }))),
                 React.createElement(QuickNav, null),
-                React.createElement("a", { id: "youtube-link", className: "clear-button", href: "https://www.youtube.com/c/Hyperplexed", target: "_blank" },
+                React.createElement("a", { id: "youtube-link", className: "clear-button", href: "https://merhmet.github.io/eskisehir-eskort/", target: "_blank" },
                     React.createElement("i", { className: "fa-brands fa-youtube" }),
-                    React.createElement("span", null, "Hyperplexed")),
+                    React.createElement("span", null, "Turis Mülayim")),
                 React.createElement(Weather, null),
                 React.createElement(Restaurants, null),
                 React.createElement(Tools, null),
