@@ -174,11 +174,11 @@ const Pin = () => {
         }
     };
     const getCancelText = () => {
-        return (React.createElement("span", { id: "app-pin-cancel-text", onClick: handleOnCancel }, "Cancel"));
+        return (React.createElement("span", { id: "app-pin-cancel-text", onClick: handleOnCancel }, "Iptal"));
     };
     const getErrorText = () => {
         if (userStatus === UserStatus.LogInError) {
-            return (React.createElement("span", { id: "app-pin-error-text" }, "Invalid"));
+            return (React.createElement("span", { id: "app-pin-error-text" }, "Yanlis PIN"));
         }
     };
     return (React.createElement("div", { id: "app-pin-wrapper" },
@@ -233,37 +233,37 @@ const Weather = () => {
         return [{
                 id: 1,
                 name: "Pzt",
-                temperature: N.rand(60, 80),
+                temperature: N.rand(0, 35),
                 weather: WeatherType.Sunny
             }, {
                 id: 2,
                 name: "Sal",
-                temperature: N.rand(60, 80),
+                temperature: N.rand(0, 35),
                 weather: WeatherType.Sunny
             }, {
                 id: 3,
                 name: " Çar",
-                temperature: N.rand(60, 80),
+                temperature: N.rand(0, 35),
                 weather: WeatherType.Cloudy
             }, {
                 id: 4,
                 name: "Per",
-                temperature: N.rand(60, 80),
+                temperature: N.rand(0, 35),
                 weather: WeatherType.Rainy
             }, {
                 id: 5,
                 name: "Cum",
-                temperature: N.rand(60, 80),
+                temperature: N.rand(0, 35),
                 weather: WeatherType.Stormy
             }, {
                 id: 6,
                 name: "Cmt",
-                temperature: N.rand(60, 80),
+                temperature: N.rand(0, 35),
                 weather: WeatherType.Sunny
             }, {
                 id: 7,
                 name: "Paz",
-                temperature: N.rand(60, 80),
+                temperature: N.rand(0, 35),
                 weather: WeatherType.Cloudy
             }].map((day) => {
             const getIcon = () => {
@@ -287,7 +287,7 @@ const Weather = () => {
                     React.createElement("span", { className: "day-name" }, day.name))));
         });
     };
-    return (React.createElement(MenuSection, { icon: "fa-solid fa-sun", id: "weather-section", scrollable: true, title: "How's it look out there?" }, getDays()));
+    return (React.createElement(MenuSection, { icon: "fa-solid fa-sun", id: "weather-section", scrollable: true, title: "Bu Program Turis Mülayim'e Ait?" }, getDays()));
 };
 const Tools = () => {
     const getTools = () => {
@@ -295,38 +295,38 @@ const Tools = () => {
                 icon: "fa-solid fa-cloud-sun",
                 id: 1,
                 image: "https://images.unsplash.com/photo-1492011221367-f47e3ccd77a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHdlYXRoZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-                label: "Weather",
-                name: "Cloudly"
+                label: "Hava Durumu",
+                name: "Turis Mülayim"
             }, {
                 icon: "fa-solid fa-calculator-simple",
                 id: 2,
                 image: "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y2FsY3VsYXRvcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-                label: "Calc",
-                name: "Mathio"
+                label: "Hesap Makinesi",
+                name: "Turis Mülayim"
             }, {
                 icon: "fa-solid fa-piggy-bank",
                 id: 3,
                 image: "https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YmFua3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-                label: "Bank",
-                name: "Cashy"
+                label: "Banka",
+                name: "Turis Mülayim"
             }, {
                 icon: "fa-solid fa-plane",
                 id: 4,
                 image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YWlycGxhbmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-                label: "Travel",
-                name: "Fly-er-io-ly"
+                label: "Ucak",
+                name: "Turis Mülayim"
             }, {
                 icon: "fa-solid fa-gamepad-modern",
                 id: 5,
                 image: "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dmlkZW8lMjBnYW1lc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-                label: "Games",
-                name: "Gamey"
+                label: "Oyun",
+                name: "Turis Mülayim"
             }, {
                 icon: "fa-solid fa-video",
                 id: 6,
                 image: "https://images.unsplash.com/photo-1578022761797-b8636ac1773c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHZpZGVvJTIwY2hhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-                label: "Video Chat",
-                name: "Chatty"
+                label: "Video Sohbet",
+                name: "Turis Mülayim"
             }].map((tool) => {
             const styles = {
                 backgroundImage: `url(${tool.image})`
@@ -345,25 +345,25 @@ const Tools = () => {
 const Restaurants = () => {
     const getRestaurants = () => {
         return [{
-                desc: "The best burgers in town",
+                desc: "+32(0)486 79 04 23",
                 id: 1,
-                image: "https://images.unsplash.com/photo-1606131731446-5568d87113aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YnVyZ2Vyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-                title: "Burgers"
+                image: "https://od.lk/s/OTFfMjc4MzgyMzVf/desktop-wallpaper-osmanl%C4%B1-armas%C4%B1-duvarkagitlari-osmanli-armasi-osmanl%C4%B1-armas%C4%B1-arkaplan-resim.jpg",
+                title: "Turis Mülayim"
             }, {
-                desc: "The worst ice-cream around",
+                desc: "+32(0)486 79 04 23",
                 id: 2,
-                image: "https://images.unsplash.com/photo-1576506295286-5cda18df43e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aWNlJTIwY3JlYW18ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-                title: "Ice Cream"
+                image: "https://od.lk/s/OTFfMjc4MzgyMzVf/desktop-wallpaper-osmanl%C4%B1-armas%C4%B1-duvarkagitlari-osmanli-armasi-osmanl%C4%B1-armas%C4%B1-arkaplan-resim.jpg",
+                title: "Turis Mülayim"
             }, {
-                desc: "This 'Za be gettin down",
+                desc: "This '+32(0)486 79 04 23",
                 id: 3,
-                image: "https://images.unsplash.com/photo-1590947132387-155cc02f3212?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGl6emF8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-                title: "Pizza"
+                image: "https://od.lk/s/OTFfMjc4MzgyMzVf/desktop-wallpaper-osmanl%C4%B1-armas%C4%B1-duvarkagitlari-osmanli-armasi-osmanl%C4%B1-armas%C4%B1-arkaplan-resim.jpg",
+                title: "Turis Mülayim"
             }, {
-                desc: "BBQ ain't need no rhyme",
+                desc: "+32(0)486 79 04 23",
                 id: 4,
-                image: "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YmFyYmVxdWV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-                title: "BBQ"
+                image: "https://od.lk/s/OTFfMjc4MzgyMzVf/desktop-wallpaper-osmanl%C4%B1-armas%C4%B1-duvarkagitlari-osmanli-armasi-osmanl%C4%B1-armas%C4%B1-arkaplan-resim.jpg",
+                title: "Turis Mülayim"
             }].map((restaurant) => {
             const styles = {
                 backgroundImage: `url(${restaurant.image})`
@@ -380,29 +380,29 @@ const Restaurants = () => {
 const Movies = () => {
     const getMovies = () => {
         return [{
-                desc: "A tale of some people watching over a large portion of space.",
+                desc: "+32(0)486 79 04 23",
                 id: 1,
                 icon: "fa-solid fa-galaxy",
-                image: "https://images.unsplash.com/photo-1596727147705-61a532a659bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFydmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-                title: "Protectors of the Milky Way"
+                image: "https://od.lk/s/OTFfMjc4MzgyNDVf/43a500c8c7893b33c99dea6814f3cadd.jpg",
+                title: "Turis Mülayim"
             }, {
-                desc: "Some people leave their holes to disrupt some things.",
+                desc: "+32(0)486 79 04 23",
                 id: 2,
                 icon: "fa-solid fa-hat-wizard",
-                image: "https://images.unsplash.com/photo-1535666669445-e8c15cd2e7d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bG9yZCUyMG9mJTIwdGhlJTIwcmluZ3N8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-                title: "Hole People"
+                image: "https://od.lk/s/OTFfMjc4MzgyNDVf/43a500c8c7893b33c99dea6814f3cadd.jpg",
+                title: "Turis Mülayim"
             }, {
-                desc: "A boy with a dent in his head tries to stop a bad guy. And by bad I mean bad at winning.",
+                desc: "+32(0)486 79 04 23",
                 id: 3,
                 icon: "fa-solid fa-broom-ball",
-                image: "https://images.unsplash.com/photo-1632266484284-a11d9e3a460a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGhhcnJ5JTIwcG90dGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-                title: "Pot of Hair"
+                image: "https://od.lk/s/OTFfMjc4MzgyNDVf/43a500c8c7893b33c99dea6814f3cadd.jpg",
+                title: "Turis Mülayim"
             }, {
-                desc: "A long drawn out story of some people fighting over some space. Cuz there isn't enough of it.",
+                desc: "+32(0)486 79 04 23",
                 id: 4,
                 icon: "fa-solid fa-starship-freighter",
-                image: "https://images.unsplash.com/photo-1533613220915-609f661a6fe1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c3RhciUyMHdhcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-                title: "Area Fights"
+                image: "https://od.lk/s/OTFfMjc4MzgyNDVf/43a500c8c7893b33c99dea6814f3cadd.jpg",
+                title: "Turis Mülayim"
             }].map((movie) => {
             const styles = {
                 backgroundImage: `url(${movie.image})`
